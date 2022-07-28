@@ -1,0 +1,22 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "cmd",
+    srcs = [
+        "root.go",
+        "start.go",
+        "version.go",
+    ],
+    importpath = "github.com/jrbeverly/github-app-for-code-change/cmd/githubapp/cmd",
+    visibility = ["//visibility:public"],
+    x_defs = {
+        "version": "{STABLE_VERSION}",
+        "commit": "{STABLE_GIT_COMMIT}",
+        "tool": "githubapp",
+    },
+    deps = [
+        "//pkg/actions",
+        "//pkg/config",
+        "@com_github_spf13_cobra//:cobra",
+    ],
+)

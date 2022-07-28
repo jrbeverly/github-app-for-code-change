@@ -1,0 +1,13 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "tree",
+    srcs = ["write.go"],
+    importpath = "github.com/jrbeverly/github-app-for-code-change/pkg/github/tree",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//internal/storage",
+        "//pkg/config/v1:config",
+        "@com_github_google_go_github//github",
+    ],
+)

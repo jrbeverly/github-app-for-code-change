@@ -1,0 +1,15 @@
+image:
+  file: .gitpod/Dockerfile
+
+checkoutLocation: "go/src/github.com/jrbeverly/github-app-for-code-change"
+workspaceLocation: "go/src/github.com/jrbeverly/github-app-for-code-change"
+
+tasks:
+  - command: go get
+
+vscode:
+  extensions:
+    - golang.go
+    - ms-azuretools.vscode-docker
+    - bazelbuild.vscode-bazel
+

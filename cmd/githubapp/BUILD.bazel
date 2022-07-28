@@ -1,0 +1,15 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "githubapp_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/jrbeverly/github-app-for-code-change/cmd/githubapp",
+    visibility = ["//visibility:private"],
+    deps = ["//cmd/githubapp/cmd"],
+)
+
+go_binary(
+    name = "githubapp",
+    embed = [":githubapp_lib"],
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,19 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "routes",
+    srcs = [
+        "commit.go",
+        "events.go",
+        "health.go",
+        "server.go",
+    ],
+    importpath = "github.com/jrbeverly/github-app-for-code-change/internal/routes",
+    visibility = ["//:__subpackages__"],
+    deps = [
+        "//internal/storage",
+        "//pkg/config/v1:config",
+        "//pkg/github/tree",
+        "//pkg/githubwebapp",
+    ],
+)

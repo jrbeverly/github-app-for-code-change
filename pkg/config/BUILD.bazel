@@ -1,0 +1,12 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "config",
+    srcs = ["container.go"],
+    importpath = "github.com/jrbeverly/github-app-for-code-change/pkg/config",
+    visibility = ["//visibility:public"],
+    deps = [
+        "//pkg/config/v1:config",
+        "@in_gopkg_yaml_v2//:yaml_v2",
+    ],
+)

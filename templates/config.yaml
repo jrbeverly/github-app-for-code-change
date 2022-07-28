@@ -1,0 +1,14 @@
+version: "0.0.1"
+auth:
+  installation: 123123
+  app-identifier: 123123
+  private-key: asdfasdf
+  webhook-secret: asdfasdf
+git:
+  name: jrbeverly
+  email: git@jrbeverly.me
+  commit: "syncing from the GitHub Application"
+repo:
+  org: jrbeverly
+  repo:  github-app-peon
+  branch: "refs/heads/main"
